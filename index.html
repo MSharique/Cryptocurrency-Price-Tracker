@@ -25,6 +25,8 @@
                   <th scope="col">1 Hour %Change</th>
                   <th scope="col">24 Hour %Change</th>
                   <th scope="col">7 Days %Change</th>
+                  <th scope="col">Min Value</th>
+                  <th scope="col">Max Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -49,6 +51,12 @@
                   </td>
                   <td ng-class="{'lessthanzero': crypto.quotes.USD.percent_change_7d < 0}">
                     {{ crypto.quotes.USD.percent_change_7d }}
+                  </td>
+                  <td>
+                    <input type="text" ng-model="minMaxValues[crypto.name].minValue" value="{{minMaxValues[crypto.name].minValue}}">
+                  </td>
+                  <td>
+                    <input type="text" ng-model="minMaxValues[crypto.name].maxValue" value="{{minMaxValues[crypto.name].maxValue}}">
                   </td>
 
                 </tr>
